@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Track Order + Footer</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+
+
+      background: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    main {
+      flex: 1;
+      
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 0;
+    }
+
+    .card {
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .form-control {
+      border-radius: 6px;
+    }
+
+    .btn-dark {
+      width: 100%;
+      font-weight: bold;
+      border-radius: 6px;
+    }
+
+    footer {
+      background-color: black;
+      color: beige;
+      padding: 40px 0;
+    }
+
+    footer h6 {
+      font-weight: bold;
+      margin-bottom: 20px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
+
+    footer a {
+      display: block;
+      color: beige;
+      text-decoration: none;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-input {
+      border: none;
+      border-bottom: 1px solid beige;
+      background: transparent;
+      color: beige;
+      width: 100%;
+      outline: none;
+      padding: 5px 0;
+    }
+
+    .footer-input::placeholder {
+      color: gray;
+    }
+
+    .social-icons a {
+      color: beige;
+      font-size: 20px;
+      margin-right: 15px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="container-fluid g-0" id="main-wrapper">
+
+
+
+    <section class="container-fluid " id="navbar">
+      <section class="row">
+        <div class="col-12 p-0">
+          <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-custom">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <h1>HEY!</h1>
+              </a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-pills" id="navbar-example2">
+                  <li class="nav-item mx-2">
+                    <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item mx-2">
+                    <a class="nav-link" href="./new.html">New</a>
+                  </li>
+
+        
+
+
+                  <li class="nav-item mx-2">
+                    <a class="nav-link " href="./track_order.html">Track Order</a>
+                  </li>
+
+                  <li class="nav-item mx-2">
+                    <a class="nav-link " href="./store_locator.html">Store Locator</a>
+                  </li>
+
+                  
+
+
+
+                </ul>
+                
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+    </section> <!--end of navbar-->
+
+
+    
+    <div class="row mb-4">
+      <div class="col text-center">
+        <h2 class="fw-bold">Track Order</h2>
+      </div>
+    </div>
+
+    <!-- Track Order Section -->
+    <main>
+      <div class="card col-md-4">
+        <h3 class="mb-3">Track Your Order</h3>
+        <p>Order ID / Tracking Number</p>
+        <input type="text" class="form-control mb-3" placeholder="Enter Order ID or Tracking Number">
+        <button class="btn btn-dark">Track Order</button>
+      </div>
+    </main>
+
+
+
+    <section class="container-fluid my-5">
+    <section class="row ">
+      <div class="col-12">
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="./new.html">Previous</a></li>
+            <li class="page-item"><a class="page-link" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link " href="./new.html">2</a></li>
+            <li class="page-item"><a class="page-link active" href="./track_order.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="./store_locator.html">4</a></li>
+            <li class="page-item"><a class="page-link" href="./store_locator.html">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </section>
+
+
+    <!-- Footer Section -->
+    <footer>
+      <div class="container">
+        <div class="row">
+
+          <!-- Shipping Info -->
+          <div class="col-md-3">
+            <h6>SHIPPING INFO</h6>
+            <a href="#">Payments</a>
+            <a href="#">Shipping & Exchange</a>
+            <a href="#">Bulk queries</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Privacy policy</a>
+          </div>
+
+          <!-- The Company -->
+          <div class="col-md-3">
+            <h6>THE COMPANY</h6>
+            <a href="#">About</a>
+            <a href="#">Our Company</a>
+            <a href="#">Contact us</a>
+            <a href="#">Store locator</a>
+            <a href="#">Franchise Enquiry</a>
+          </div>
+
+          <!-- My Account -->
+          <div class="col-md-3">
+            <h6>MY ACCOUNT</h6>
+            <a href="#">Track Order</a>
+            <a href="#">Exchange Request</a>
+          </div>
+
+          <!-- Exclusive Benefits -->
+          <div class="col-md-3">
+            <h6>EXCLUSIVE BENEFITS</h6>
+            <input type="email" class="footer-input mb-2" placeholder="Enter email here">
+            <p class="small">Apply for our free membership to receive exclusive deals, news, and events.</p>
+            <div class="social-icons mt-3">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</body>
+
+</html>

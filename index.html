@@ -1,0 +1,707 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Shop Stylish</title>
+    <link rel="icon" href="https://themewagon.github.io/Koppee/img/carousel-1.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <style>
+    .category-scroll {
+      overflow-x: auto;
+      white-space: nowrap;
+      -webkit-overflow-scrolling: touch;
+    }
+    .category-scroll .btn {
+      margin: 0.25rem;
+      border-radius: 8px;
+    }
+    .category-title {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+    .product-card {
+      border: none;
+      background: beige;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+    .badge-new {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: black;
+      color: beige;
+      padding: 4px 10px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+    }
+    .product-info {
+      margin-top: 12px;
+    }
+    .price {
+      font-weight: bold;
+      color: hsl(2, 64%, 58%);
+      font-size: 1rem;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: gray;
+      margin-right: 5px;
+    }
+    .choose-options {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.7);
+      color: beige;
+      text-align: center;
+      padding: 10px;
+      font-weight: 500;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .product-card:hover .choose-options {
+      opacity: 1;
+    }
+
+    .card img {
+  transition: transform 0.4s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+  </style>
+
+</head>
+
+<body>
+    <section class="container-fluid g-0" id="main-wrapper">
+
+        <section class="container-fluid " id="navbar" >
+            <section class="row">
+                <div class="col-12 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+                        <div class="container-fluid">
+                            <a class="navbar-brand" href="#">
+                                <h1>HEY!</h1>
+                            </a>
+                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                                <span class="navbar-toggler-icon"></span>
+                            </button>
+                            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 nav-pills" id="navbar-example2">
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link " aria-current="page" href="./index.html">Home</a>
+                                    </li>
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link" href="./new.html">New</a>
+                                    </li>
+
+
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link " href="./track_order.html">Track Order</a>
+                                    </li>
+
+                                    <li class="nav-item mx-2">
+                                        <a class="nav-link " href="./store_locator.html">Store Locator</a>
+                                    </li>
+
+                                   
+
+
+                                </ul>
+                                <!-- <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Search"
+                                        aria-label="Search">
+                                    <button class="btn btn-outline-success" type="submit">Search</button>
+                                </form> -->
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </section>
+        </section> <!--end of navbar-->
+
+
+
+
+
+
+
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://www.hayclothing.in/cdn/shop/files/25_3.png?v=1758199607&width=2000" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.hayclothing.in/cdn/shop/collections/Launch_banners_2.png?v=1755949143&width=2000" class="d-block w-100" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="https://www.hayclothing.in/cdn/shop/files/D_BANNER-02.png?v=1745057996&width=2000" class="d-block w-100" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+        <div class="container my-5">
+  <div class="row text-center">
+
+    <!-- Category 1 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-15_1.png?v=1755764905" class="img-fluid mb-2 rounded" alt="All Co-Ords">
+        <h6>SALE</h6>
+      </div>
+    </div>
+
+    <!-- Category 2 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-11_540ffd15-7ffb-43bf-a653-c92e739ada63.png?v=1755760978" class="img-fluid mb-2 rounded" alt="Maternity">
+        <h6>NEW ARRIVALS</h6>
+      </div>
+    </div>
+
+    <!-- Category 3 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-10.png?v=1755760978" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>BEST SELLERS</h6>
+      </div>
+    </div>
+
+    <!-- Category 4 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-09.png?v=1755760978" class="img-fluid mb-2 rounded" alt="Best Sellers">
+        <h6>ALL DRESSES</h6>
+      </div>
+    </div>
+
+    <!-- Category 5 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-08_025e9825-5b7b-43e4-ace8-0566c33272e3.png?v=1755760979" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>ALL KURTAS</h6>
+      </div>
+    </div>
+
+    <!-- Category 6 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-07_43655763-e92f-4af3-a895-1c30253cfd28.png?v=1755760978" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>ALL CO-ORDS</h6>
+      </div>
+    </div>
+
+    <!-- Category 7 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-14_c5e768cb-f8a1-4c89-a6e5-b689b2d220cd.png?v=1755760979" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>MATERNITY</h6>
+      </div>
+    </div>
+
+    <!-- Category 8 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-20_1.png?v=1752148190" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>RESORT WEAR</h6>
+      </div>
+    </div>
+
+    <!-- Category 9 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-20_1.png?v=1752148190" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>ORGANZA</h6>
+      </div>
+    </div>
+
+    <!-- Category 10 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/new-22_2.png?v=1741005685" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>SUIT SETS</h6>
+      </div>
+    </div>
+
+    <!-- Category 11 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/new-22_2.png?v=1741005685" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>ANKLE LEGGINGS</h6>
+      </div>
+    </div>
+
+    <!-- Category 12 -->
+    <div class="col-md-3 col-6 mb-4">
+      <div class="p-3 rounded">
+        <img src="https://www.hayclothing.in/cdn/shop/files/ci-21.png?v=1751105346" class="img-fluid mb-2 rounded" alt="New Arrivals">
+        <h6>CHURIDAR LEGGINGS</h6>
+      </div>
+    </div>
+
+  </div> <!-- end row -->
+</div> <!-- end container -->
+<!-- New Arrivals Section -->
+
+  <div class="container">
+    <div class="row align-items-center mb-3">
+      <div class="col-auto">
+        <h3 class="category-title">New <br> Arrivals</h3>
+      </div>
+      <div class="col">
+        <div class="category-scroll d-flex">
+          <button class="btn btn-outline-dark">All Co-ords</button>
+          <button class="btn btn-outline-dark">All Dresses</button>
+          <button class="btn btn-outline-dark">All Kurtas</button>
+          <button class="btn btn-outline-dark">Ankle Leggings</button>
+          <button class="btn btn-outline-dark">Editions</button>
+          <button class="btn btn-outline-dark">Organza</button>
+          <button class="btn btn-outline-dark">Suit Sets</button>
+          <button class="btn btn-outline-dark">Festive</button>
+          <button class="btn btn-outline-dark">Straight Pant</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<section class="container my-5">
+  <div class="row g-4">
+
+    <!-- Product Card -->
+    <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard5_5839c5d5-6948-428c-8249-2534aaa17beb.png?v=1757499834&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Starry black with midnight bloom floral printed Viscose Kurta</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 999.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 899.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard4_a42df3cc-df4b-42e3-8c0d-21537a54deba.png?v=1757497369&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Lunar Violet with Twilight Tango floral printed Viscose Kurta</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 999.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 899.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Add more product cards as needed -->
+
+    <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard4_dabb1811-ff81-48cf-addc-96262342aee4.png?v=1757498041&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Magenta Petal printed Viscose Kurta</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 999.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 899.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard3_2cd2fcd8-eaaf-4169-9ba5-875500144b58.png?v=1757498904&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Fresco Blue With Mint Mural printed Viscose Kurta</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 999.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 899.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="container my-5">
+
+    <!-- Section Heading -->
+    <div class="text-center mb-4">
+      <h2 class="fw-bold">The Resort Wear Editions</h2>
+      <button class="btn btn-outline-dark mt-2">VIEW MORE</button>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row g-4">
+
+      <!-- Product 1 -->
+    <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard8_7035e463-23aa-48b9-80b1-6bf0f0323877.png?v=1750241910&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Rosire Scallop Crop Top and Skirt</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 2799.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 2199.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Product 2 -->
+      <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard7_6ba7c89e-3491-4685-8bb7-d91293d08465.png?v=1750242064&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Zyra with balloon slive with elastic flared dress</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 2799.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 2199.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Product 3 -->
+      <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard2_cf30f21d-c14a-42f1-bc60-a48c980467b8.png?v=1750230665&width=1100" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Lovelit high love sleeveless boat neck co ords </p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 2799.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 2199.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      <!-- Product 4 -->
+      <div class="col-6 col-md-3">
+      <div class="card border-0">
+        <div class="position-relative">
+          <img src="https://www.hayclothing.in/cdn/shop/files/Artboard3_0b408436-8265-4124-902a-ae35afd3e5b4.png?v=1750242530&width=535" class="card-img-top rounded-3" alt="Product">
+          <span class="badge bg-dark position-absolute top-0 start-0 m-2">New</span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">Blackout babe high neck with side buttons flared dress</p>
+          <p>
+            <span class="text-muted text-decoration-line-through">Rs. 2799.00</span>
+            <span class="fw-bold text-danger ms-2">Rs. 2199.00</span>
+          </p>
+          <div class="d-flex flex-wrap gap-2">
+            <button class="btn btn-outline-dark btn-sm">S</button>
+            <button class="btn btn-outline-dark btn-sm">M</button>
+            <button class="btn btn-outline-dark btn-sm">L</button>
+            <button class="btn btn-outline-dark btn-sm">XL</button>
+            <button class="btn btn-outline-dark btn-sm">XXL</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+  </div>
+
+  <div class="container-fluid">
+    <div class="row min-vh-100 align-items-center">
+      
+      <div class="col-12 p-0">
+  <img src="https://www.hayclothing.in/cdn/shop/files/1_1_f88ac234-adff-4493-8e65-c95a2b552cc6.png?v=1755838145&width=2000" 
+       class="img-fluid w-100 object-fit-cover" 
+       alt="Fashion Look">
+</div>
+
+
+      
+
+    </div>
+  </div>
+
+  <section class="py-5">
+    <div class="container">
+      <!-- Section Title -->
+      <h2 class="text-center mb-5">More collections to explore</h2>
+
+      <!-- Collections Grid -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- Card 1 -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="https://www.hayclothing.in/cdn/shop/files/ddd-01.jpg?v=1755867915" class="card-img-top img-fluid rounded-top" alt="All Dresses">
+            <div class="card-body text-center">
+              <h6 class="mb-0">All Dresses →</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="https://www.hayclothing.in/cdn/shop/files/ddd-02.jpg?v=1755867915" class="card-img-top img-fluid rounded-top" alt="Resort Wear">
+            <div class="card-body text-center">
+              <h6 class="mb-0">Resort Wear →</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="https://www.hayclothing.in/cdn/shop/files/DD-06_1.png?v=1744977996" class="card-img-top img-fluid rounded-top" alt="Ankle Leggings">
+            <div class="card-body text-center">
+              <h6 class="mb-0">Ankle Leggings →</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="https://www.hayclothing.in/cdn/shop/files/ddd-04.jpg?v=1755867915" class="card-img-top img-fluid rounded-top" alt="Churidar Leggings">
+            <div class="card-body text-center">
+              <h6 class="mb-0">Churidar Leggings →</h6>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="col-6 col-md-4 col-lg-2">
+          <div class="card border-0 shadow-sm h-100 rounded-4">
+            <img src="https://www.hayclothing.in/cdn/shop/files/drafts-05.png?v=1738407341" class="card-img-top img-fluid rounded-top" alt="Festive Wear">
+            <div class="card-body text-center">
+              <h6 class="mb-0">Festive Wear →</h6>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="container-fluid my-5">
+    <section class="row ">
+      <div class="col-12">
+        <nav aria-label="Page navigation example" class="d-flex justify-content-center">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link disabled" href="#">Previous</a></li>
+            <li class="page-item"><a class="page-link active" href="index.html">1</a></li>
+            <li class="page-item"><a class="page-link" href="./new.html">2</a></li>
+            <li class="page-item"><a class="page-link" href="./track_order.html">3</a></li>
+            <li class="page-item"><a class="page-link" href="./store_locator.html">4</a></li>
+            <li class="page-item"><a class="page-link " href="./new.html">Next</a></li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </section>
+
+
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row">
+
+        <!-- Shipping Info -->
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3">Shipping Info</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Payments</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Shipping & Exchange</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Bulk queries</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Terms & Conditions</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Privacy policy</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Fabric/Print disclaimer</a></li>
+          </ul>
+          <div class="d-flex gap-2 mt-3">
+            <a href="#" class="btn btn-outline-light btn-sm">
+              <i class="bi bi-android2"></i> Download the Android App
+            </a>
+            <a href="#" class="btn btn-outline-light btn-sm">
+              <i class="bi bi-apple"></i> Download the iOS App
+            </a>
+          </div>
+        </div>
+
+        <!-- Company -->
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3">The Company</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">About</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Our Company</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Contact us</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Store locator</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Franchise Enquiry</a></li>
+          </ul>
+        </div>
+
+        <!-- My Account -->
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3">My Account</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-white text-decoration-none">Track Order</a></li>
+            <li><a href="#" class="text-white text-decoration-none">Exchange Request</a></li>
+          </ul>
+        </div>
+
+        <!-- Exclusive Benefits -->
+        <div class="col-6 col-md-3 mb-4">
+          <h6 class="text-uppercase mb-3">Exclusive Benefits</h6>
+          <form class="d-flex mb-2">
+            <input type="email" class="form-control form-control-sm bg-dark text-white border-0 border-bottom rounded-0" placeholder="Enter email here">
+            <button class="btn btn-link text-white" type="submit"><i class="bi bi-arrow-right"></i></button>
+          </form>
+          <small class="d-block mb-3">Apply for our free membership to receive exclusive deals, news, and events.</small>
+          <div class="d-flex gap-3">
+            <a href="#" class="text-white"><i class="bi bi-facebook fs-4"></i></a>
+            <a href="#" class="text-white"><i class="bi bi-instagram fs-4"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="border-secondary">
+
+      <div class="text-center">
+        <small>© 2025, HAY! . All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+       
+
+    </section> 
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
